@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminActivity"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="0,1,2,3,4,5"
+                    >
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/SN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="S.No"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+
+                        <TextView
+                            android:id="@+id/Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+                        <TextView
+                            android:id="@+id/Email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+                        <TextView
+                            android:id="@+id/Gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+                        <TextView
+                            android:id="@+id/UserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UserName"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+                        <TextView
+                            android:id="@+id/Dob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dob"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+                        <TextView
+                            android:id="@+id/Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+
+                    </TableRow>
+
+
+
+                </TableLayout>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editDetailsActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/editDetailsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="text"
+                    android:layout_marginBottom="5dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/editDetailsEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="5dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="17dp"
+                    android:paddingLeft="16dp"/>
+
+
+                <CheckBox
+                    android:id="@+id/editDetailsMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    />
+                <CheckBox
+                    android:id="@+id/editDetailsFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/editDetailsUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:layout_marginBottom="5dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleTint="@color/black"
+                android:scrollbarSize="25dp"
+                app:passwordToggleEnabled="true" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editDetailsPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="5dp"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/editDetailsDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_marginBottom="5dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/editDetailsPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_marginBottom="5dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/editDetailsRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_marginBottom="5dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/editDetailsSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textAllCaps="false"/>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
