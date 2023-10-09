@@ -137,7 +137,7 @@ class adminActivity : AppCompatActivity() {
                 dialogInterface.dismiss()
             }
             alertDialogBuilder.setNegativeButton("No") { dialogInterface: DialogInterface, _: Int ->
-                // User clicked "No," so do nothing
+
                 dialogInterface.dismiss()
             }
 
