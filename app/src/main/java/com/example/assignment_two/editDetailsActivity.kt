@@ -23,6 +23,7 @@ class editDetailsActivity : AppCompatActivity() {
          private lateinit var editPhone: EditText
          private lateinit var editRole: EditText
          private lateinit var editButton: Button
+         private lateinit var backEditButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_details)
@@ -35,6 +36,7 @@ class editDetailsActivity : AppCompatActivity() {
         editPhone = findViewById(R.id.editDetailsPhone)
         editRole = findViewById(R.id.editDetailsRole)
         editButton = findViewById(R.id.editDetailsSave)
+        backEditButton = findViewById(R.id.backEditButton)
         var editMale = findViewById<CheckBox>(R.id.editDetailsMale)
         var editFemale = findViewById<CheckBox>(R.id.editDetailsFemale)
 
@@ -42,6 +44,12 @@ class editDetailsActivity : AppCompatActivity() {
 
         val userList = loadUserDataList()
         val i = intent.getIntExtra("index",-1)
+
+        backEditButton.setOnClickListener {
+
+            val intent  = Intent(this,adminActivity::class.java)
+            startActivity(intent)
+        }
 
         for((index, userData) in userList.withIndex()){
 

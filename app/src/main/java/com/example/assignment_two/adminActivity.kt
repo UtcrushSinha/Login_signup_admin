@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -18,13 +19,30 @@ class adminActivity : AppCompatActivity() {
 
 
     var i: Int = 0
-    @SuppressLint("SuspiciousIndentation")
+    private lateinit var adminLogOut: Button
+    @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
 
        val tableLayout = findViewById<TableLayout>(R.id.tableLayout)
+        adminLogOut = findViewById(R.id.adminLogOut)
        val userList  = loadUserDataList()
+
+        adminLogOut.setOnClickListener {
+
+            val sP = getSharedPreferences("LoginPreferences", MODE_PRIVATE)
+
+            val editor = sP.edit()
+
+            editor.remove("username").apply()
+            editor.remove("role").apply()
+
+            showToast("admin logout successfully")
+
+            val intent = Intent(this,loginPageActivity::class.java)
+            startActivity(intent)
+        }
 
 
         for ((index, userData) in userList.withIndex()) {
@@ -155,6 +173,10 @@ class adminActivity : AppCompatActivity() {
         val dataJson = gson.toJson(userDataList)
         editor.putString("user_data_list", dataJson)
         editor.apply()
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
 
